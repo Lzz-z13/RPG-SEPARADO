@@ -2,12 +2,11 @@ import time
 from historia.caminhos import caminhos
 from assets.things import clearScreen
 from assets.things import typewriter
-from assets.data import dic_nomes
 from assets.data import dic_espadas
 from assets.data import nome_al
+personagem = nome_al()  # Sorteia personagem 1 vez
 
-def historia():
-    personagem = nome_al()  # Sorteia personagem 1 vez
+def historia(personagem):
     nome = personagem["nome"]
     vida = personagem["vida"]
     dano = personagem["dano"]
@@ -71,7 +70,7 @@ def historia():
         elif choice == "3":
             typewriter("\033[31;1mG:\033[m Já que você está pronto, vou te dar um canivete.")
             time.sleep(2)
-            typewriter(f"\033[31;1mG:\033[m Aqui está sua espada: {dic_espadas['A']}")
+            typewriter(f"\033[31;1mG:\033[m Aqui está sua arma: {dic_espadas['A']}")
             time.sleep(1)
             typewriter("Você pega a espada e sente que ela é leve, mas fraca e sem poder.")
             time.sleep(1)
@@ -84,4 +83,4 @@ def historia():
             typewriter("Você já perguntou isso ou digitou algo inválido.")
             time.sleep(1.5)
     # Função para iniciar os caminhos
-    caminhos()
+    caminhos(personagem)

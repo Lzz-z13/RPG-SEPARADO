@@ -36,7 +36,7 @@ def start(mortes):
                 print(".", end="", flush=True)
                 time.sleep(1)
             print()
-            historia()
+            historia(personagem=dic_nomes[random.choice(list(dic_nomes.keys()))])
             break
 
         elif choice == 2:

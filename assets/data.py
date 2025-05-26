@@ -13,5 +13,4 @@ dic_nomes = {
 }
 
 def nome_al():
-    chave_sorteada = random.choice(list(dic_nomes.keys()))
-    return dic_nomes[chave_sorteada]
+    return random.choice(list(dic_nomes.keys()))

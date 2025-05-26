@@ -1,2 +1,6 @@
 from historia.menu import start
-start(mortes=0)
+def main():
+    start(mortes=0)
+if __name__ == "__main__":
+    main()
+    # Inicia o jogo com 0 mortes

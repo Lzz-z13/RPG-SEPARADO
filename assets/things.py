@@ -1,10 +1,9 @@
 import time
-import sys
+import os
+import platform
+
 
 def clearScreen():
-    import os
-    import platform
-
     if platform.system() == "Windows":
         os.system("cls")
     else:
